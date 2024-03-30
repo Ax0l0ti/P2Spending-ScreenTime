@@ -286,11 +286,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kenne\\OneDrive - University of Bath\\Code\\C#\\GraphGUITest4.1\\GraphGUITest4.1\\GraphGUITest4.1.csproj",
+      "projectUniqueName": "C:\\Users\\kenne\\Source\\Repos\\Ax0l0ti\\P2Spending-ScreenTime\\GraphGUITest4.1\\GraphGUITest4.1\\GraphGUITest4.1.csproj",
       "projectName": "GraphGUITest4.1",
-      "projectPath": "C:\\Users\\kenne\\OneDrive - University of Bath\\Code\\C#\\GraphGUITest4.1\\GraphGUITest4.1\\GraphGUITest4.1.csproj",
+      "projectPath": "C:\\Users\\kenne\\Source\\Repos\\Ax0l0ti\\P2Spending-ScreenTime\\GraphGUITest4.1\\GraphGUITest4.1\\GraphGUITest4.1.csproj",
       "packagesPath": "C:\\Users\\kenne\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kenne\\OneDrive - University of Bath\\Code\\C#\\GraphGUITest4.1\\GraphGUITest4.1\\obj\\",
+      "outputPath": "C:\\Users\\kenne\\Source\\Repos\\Ax0l0ti\\P2Spending-ScreenTime\\GraphGUITest4.1\\GraphGUITest4.1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kenne\\AppData\\Roaming\\NuGet\\NuGet.Config",
