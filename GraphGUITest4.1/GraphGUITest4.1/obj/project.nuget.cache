@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "Racj/XMvguz+vAEToIWN4rsDcgf8mZ+IWuBnYpb0e8mzaJRR1stzLSJZrDtkPATCb6QGJfUU8D9YQTbgi1CYgQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\kenne\\OneDrive - University of Bath\\Code\\C#\\GraphGUITest4.1\\GraphGUITest4.1\\GraphGUITest4.1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kenne\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.4\\microsoft.netcore.platforms.3.1.4.nupkg.sha512",
+    "C:\\Users\\kenne\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\kenne\\.nuget\\packages\\scottplot\\4.1.73\\scottplot.4.1.73.nupkg.sha512",
+    "C:\\Users\\kenne\\.nuget\\packages\\scottplot.winforms\\4.1.73\\scottplot.winforms.4.1.73.nupkg.sha512",
+    "C:\\Users\\kenne\\.nuget\\packages\\system.drawing.common\\4.7.2\\system.drawing.common.4.7.2.nupkg.sha512",
+    "C:\\Users\\kenne\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
