@@ -14,6 +14,7 @@ namespace GraphGUITest4._1
             ConfigurePlot1();
             ConfigurePlot2();
             ConfigurePlot3();
+            ConfigurePlot4();
         }
 
         private void ConfigurePlot1()
@@ -111,6 +112,9 @@ namespace GraphGUITest4._1
             Plot3.Plot.Legend(location: ScottPlot.Alignment.UpperRight);
             Plot3.Plot.SetAxisLimits(yMin: 0);
 
+            Plot3.Plot.XLabel("Week");
+            Plot3.Plot.YLabel("Screen Time in Hours");
+
             // disable left-click-drag pan
             Plot3.Configuration.Pan = false;
 
@@ -125,6 +129,39 @@ namespace GraphGUITest4._1
 
             Plot3.Refresh();
 
+        }
+
+        private void ConfigurePlot4()
+        {
+            double[] week1 = { 7, 10, 6, 2, 11, 13, 1 };
+            double[] week2 = { 4, 2, 5, 4, 9, 13, 5 };
+            double[] week3 = { 8, 4, 9, 1, 13, 14, 6 };
+            double[] week4 = { 2, 7, 5, 4, 10, 9, 7 };
+
+            string[] groupNames = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+            string[] seriesNames = { "Week 1", "Week 2", "Week 3", "Week 4" };
+            double[][] valuesBySeries = { week1, week2, week3, week4 };
+
+            Plot4.Plot.AddBarGroups(groupNames, seriesNames, valuesBySeries, null);
+            Plot4.Plot.Legend(location: ScottPlot.Alignment.UpperRight);
+            Plot4.Plot.SetAxisLimits(yMin: 0);
+
+            Plot4.Plot.XLabel("Day of the Week");
+            Plot4.Plot.YLabel("Screen Time in Hours");
+
+            // disable left-click-drag pan
+            Plot4.Configuration.Pan = false;
+
+            // disable right-click-drag zoom
+            Plot4.Configuration.Zoom = false;
+
+            // disable scroll wheel zoom
+            Plot4.Configuration.ScrollWheelZoom = false;
+
+            // disable middle-click-drag zoom window
+            Plot4.Configuration.MiddleClickDragZoom = false;
+
+            Plot4.Refresh();
         }
 
         private void formsPlot2_Load(object sender, EventArgs e)
