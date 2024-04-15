@@ -23,15 +23,5 @@ responses = service.forms().responses().list(formId=form_id).execute()
 
 json_object = json.dumps(responses, indent=4)
 
-with open("TestData.json", "w") as outfile:
-    outfile.write(json_object)
-
-data = dict(json_object)
-data = data["responses"][0]["answers"]
-keys = list(data.keys())
-print(data)
-print(keys)
-
-for key in keys:
-    print(data[key]["textAnswers"]["answers"])
+print(json_object)
 
