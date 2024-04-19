@@ -2,8 +2,7 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 import json
 
-
-print("Started")
+person_info = {}
 # Path to  credentials file
 credentials_path = 'client_secret_731298178693-tb15106p8tbprosrbql3t4fqa0q68st0.apps.googleusercontent.com.json'
 #
@@ -16,12 +15,19 @@ creds = flow.run_local_server(port=0)
 service = build('forms', 'v1', credentials=creds)
 
 # ID of  form
-form_id = '1kxa76M58gYKgVskbWPYNe9VObZAW3DvOaQG-0AidYno'
+form_id = '1L2oa5zrCwaDKlZq81qPq3YjUTiNAt7zZAgjexcxfBUY'
 
 # Fetch form responses
 responses = service.forms().responses().list(formId=form_id).execute()
 
 json_object = json.dumps(responses, indent=4)
+response_dict = json.loads(json_object)
 
-print(json_object)
+final_response = response_dict["responses"][0]
+name = final_response['answers']['6b8833a2']['textAnswers']['answers'][0]['value']
+budget = final_response['answers']['3b1cd5ac']['textAnswers']['answers'][0]['value']
+
+person_info["name"] = name
+person_info["budget"] = budget
+print(person_info)
 
