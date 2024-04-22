@@ -15,19 +15,22 @@ creds = flow.run_local_server(port=0)
 service = build('forms', 'v1', credentials=creds)
 
 # ID of  form
-form_id = '1L2oa5zrCwaDKlZq81qPq3YjUTiNAt7zZAgjexcxfBUY'
+form_id = '1JeuzJUOSR4Po4wjeKxVZ3EgqdTEC4sEZyMFN_kvYVE4'
 
 # Fetch form responses
 responses = service.forms().responses().list(formId=form_id).execute()
 
 json_object = json.dumps(responses, indent=4)
 response_dict = json.loads(json_object)
-
 final_response = response_dict["responses"][0]
-name = final_response['answers']['6b8833a2']['textAnswers']['answers'][0]['value']
-budget = final_response['answers']['3b1cd5ac']['textAnswers']['answers'][0]['value']
+name = final_response['answers']['7097c5ba']['textAnswers']['answers'][0]['value']
+budget = final_response['answers']['0d9fc917']['textAnswers']['answers'][0]['value']
+password = final_response['answers']['6df45611']['textAnswers']['answers'][0]['value']
+
 
 person_info["name"] = name
 person_info["budget"] = budget
+person_info["password"] = password
+
 print(person_info)
 
