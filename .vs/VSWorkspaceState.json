@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\GraphGUITest4.1"
+    "\\GraphGUITest4.1",
+    "\\GraphGUITest4.1\\GraphGUITest4.1"
   ],
-  "SelectedNode": "\\GraphGUITest4.1\\GraphGUITest4.1.sln",
+  "SelectedNode": "\\GraphGUITest4.1\\GraphGUITest4.1\\Form1.cs",
   "PreviewInSolutionExplorer": false
 }

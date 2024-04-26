@@ -14,4 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GraphingGUITest
-build_property.ProjectDir = C:\Users\kenne\Source\Repos\Ax0l0ti\P2Spending-ScreenTime\GraphingGUITest\GraphingGUITest\
+build_property.ProjectDir = C:\Users\noaha\source\repos\P2Spending-ScreenTime\GraphingGUITest\GraphingGUITest\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

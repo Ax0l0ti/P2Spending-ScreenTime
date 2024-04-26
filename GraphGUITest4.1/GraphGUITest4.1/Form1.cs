@@ -15,6 +15,9 @@ namespace GraphGUITest4._1
             ConfigurePlot2();
             ConfigurePlot3();
             ConfigurePlot4();
+
+            scatter();
+
         }
 
         private void ConfigurePlot1()
@@ -26,37 +29,132 @@ namespace GraphGUITest4._1
 
             for (int i = 0; i < data.Length; i++)
             {
-                var bar = formsPlot1.Plot.AddBar(
+                var bar = barPlot.Plot.AddBar(
                     values: new double[] { data[i] },
                     positions: new double[] { postions[i] },
                     color: colours[i]
                     );
             }
 
-            formsPlot1.Plot.XLabel("Application");
-            formsPlot1.Plot.YLabel("Screen Time (Hrs)");
-            formsPlot1.Plot.Title("Screen Usage");
+            barPlot.Plot.XLabel("Application");
+            barPlot.Plot.YLabel("Screen Time (Hrs)");
+            barPlot.Plot.Title("Screen Usage");
 
             //formsPlot1.Plot.AddBar(data, postions);
-            formsPlot1.Plot.XTicks(postions, labels);
-            formsPlot1.Plot.SetAxisLimits(yMin: 0);
+            barPlot.Plot.XTicks(postions, labels);
+            barPlot.Plot.SetAxisLimits(yMin: 0);
 
-            formsPlot1.Plot.Grid(false);
+            barPlot.Plot.Grid(false);
 
             // disable left-click-drag pan
-            formsPlot1.Configuration.Pan = false;
+            barPlot.Configuration.Pan = false;
 
             // disable right-click-drag zoom
-            formsPlot1.Configuration.Zoom = false;
+            barPlot.Configuration.Zoom = false;
 
             // disable scroll wheel zoom
-            formsPlot1.Configuration.ScrollWheelZoom = false;
+            barPlot.Configuration.ScrollWheelZoom = false;
 
             // disable middle-click-drag zoom window
-            formsPlot1.Configuration.MiddleClickDragZoom = false;
+            barPlot.Configuration.MiddleClickDragZoom = false;
 
-            formsPlot1.Refresh();
+            barPlot.Refresh();
         }
+
+        private double[] GenerateDoublesList(int size)
+        {
+            double[] doublesArray = new double[size + 1];
+
+            // Generate doubles ranging from 0 to 'x'
+            for (int i = 0; i <= size; i++)
+            {
+                doublesArray[i] = (double)i;
+            }
+
+            return doublesArray;
+        }
+
+        /** Genereates random doubles that have a trend
+         **/
+        private double[] RandomDoubles(int size)
+        {
+            // Parameters
+            double currentValue = 0; // Starting value of the sequence
+            double baseIncrement = 5; // Base increment per step in the sequence
+            double incrementVar = 20.0; // Random variability in the increment
+            double anomalyFreq = 0.1; // Frequency of anomalies (0 to 1)
+            double anomalyVar = 20.0; // Variance of the anomaly values
+
+            // Create the array
+            Random random = new Random();
+            double[] array = new double[size + 1];
+
+
+            for (int i = 0; i < size; i++)
+            {
+
+                // Apply a random increment variability
+                double increment = (baseIncrement + (random.NextDouble() - 0.5) * incrementVar);
+
+                // Decide if this value should be an anomaly
+                if (random.NextDouble() < anomalyFreq)
+                {
+                    // Apply anomaly by adding a random value based on the anomaly variance
+                    array[i] = Math.Round(currentValue + (random.NextDouble() - 0.5) * anomalyVar, 2);
+                }
+                else
+                {
+                    // Follow the normal incremented value
+                    array[i] = Math.Round(currentValue + ((random.NextDouble() - 0.5) * incrementVar), 2);
+                }
+                if (array[i] < 0)
+                {
+                    array[i] = 0;
+                }
+                // Update the current value with the randomized increment
+                currentValue += increment;
+            }
+
+            return array;
+        }
+
+
+        private void scatter()
+        {
+            scat.Plot.Clear();
+
+            // create funcion to retreive the max value req for X axis
+            int maxHours = 10;
+
+
+            //generates ints as doubles from 0 to maxHours
+            double[] xs = GenerateDoublesList(maxHours);
+            // ys is dud data and should be changed when proper data can be accessed
+            double[] ys = RandomDoubles(maxHours);
+
+            // plot original data as a scatter plot
+            var sp = scat.Plot.AddScatter(xs, ys);
+            sp.LineStyle = LineStyle.None;
+            sp.MarkerSize = 10;
+
+            // calculate the regression line
+            ScottPlot.Statistics.LinearRegressionLine reg = new(xs, ys);
+
+            // plot the regression line
+            Coordinate pt1 = new(xs.First(), reg.GetValueAt(xs.First()));
+            Coordinate pt2 = new(xs.Last(), reg.GetValueAt(xs.Last()));
+            scat.Plot.AddLine((pt1.X), (pt1.Y), (pt2.X), (pt2.Y));
+            // naming Axis
+            scat.Plot.XLabel("Screen Time");
+            scat.Plot.YLabel("Spending");
+            // set limit 
+            scat.Plot.SetAxisLimits(0, maxHours, 0, ys.Max() + 10);
+            lblScat.Font = new Font(lblScat.Font.FontFamily, 10, System.Drawing.FontStyle.Bold);
+            lblScat.Text = "Screen Time & Spending " + Environment.NewLine + "Y = " + Math.Round(reg.slope, 2) + "X + " + Math.Round(reg.offset, 2) + " ( R^2 = " + Math.Round(reg.rSquared, 2) + " )";
+            scat.Refresh();
+        }
+
+
 
         private void ConfigurePlot2()
         {
@@ -167,6 +265,11 @@ namespace GraphGUITest4._1
         private void formsPlot2_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_Reset_Click_1(object sender, EventArgs e)
+        {
+            scatter();
         }
     }
 }

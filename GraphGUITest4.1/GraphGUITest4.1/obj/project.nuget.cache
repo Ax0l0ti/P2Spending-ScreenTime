@@ -1,15 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "Racj/XMvguz+vAEToIWN4rsDcgf8mZ+IWuBnYpb0e8mzaJRR1stzLSJZrDtkPATCb6QGJfUU8D9YQTbgi1CYgQ==",
+  "dgSpecHash": "jWxWjrs0TAXe9jbkuh7Jj3UMc+XZVtJ++9K6nTEf8K35QLhZ1NPMQjtPlCkI77xhcVp4OzZT+mlk6N93vG1k8A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kenne\\OneDrive - University of Bath\\Code\\C#\\GraphGUITest4.1\\GraphGUITest4.1\\GraphGUITest4.1.csproj",
+  "projectFilePath": "C:\\Users\\noaha\\source\\repos\\P2Spending-ScreenTime\\GraphGUITest4.1\\GraphGUITest4.1\\GraphGUITest4.1.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\kenne\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.4\\microsoft.netcore.platforms.3.1.4.nupkg.sha512",
-    "C:\\Users\\kenne\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
-    "C:\\Users\\kenne\\.nuget\\packages\\scottplot\\4.1.73\\scottplot.4.1.73.nupkg.sha512",
-    "C:\\Users\\kenne\\.nuget\\packages\\scottplot.winforms\\4.1.73\\scottplot.winforms.4.1.73.nupkg.sha512",
-    "C:\\Users\\kenne\\.nuget\\packages\\system.drawing.common\\4.7.2\\system.drawing.common.4.7.2.nupkg.sha512",
-    "C:\\Users\\kenne\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+    "C:\\Users\\noaha\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.4\\microsoft.netcore.platforms.3.1.4.nupkg.sha512",
+    "C:\\Users\\noaha\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\noaha\\.nuget\\packages\\scottplot\\4.1.73\\scottplot.4.1.73.nupkg.sha512",
+    "C:\\Users\\noaha\\.nuget\\packages\\scottplot.winforms\\4.1.73\\scottplot.winforms.4.1.73.nupkg.sha512",
+    "C:\\Users\\noaha\\.nuget\\packages\\system.drawing.common\\4.7.2\\system.drawing.common.4.7.2.nupkg.sha512",
+    "C:\\Users\\noaha\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\noaha\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.28\\microsoft.windowsdesktop.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\noaha\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.28\\microsoft.netcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\noaha\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.28\\microsoft.aspnetcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\noaha\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.28\\microsoft.netcore.app.host.win-x64.6.0.28.nupkg.sha512"
   ],
   "logs": []
 }

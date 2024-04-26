@@ -14,4 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GraphGUITest4._1
-build_property.ProjectDir = C:\Users\kenne\OneDrive - University of Bath\Code\C#\GraphGUITest4.1\GraphGUITest4.1\
+build_property.ProjectDir = C:\Users\noaha\source\repos\P2Spending-ScreenTime\GraphGUITest4.1\GraphGUITest4.1\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
