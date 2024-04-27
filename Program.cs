@@ -8,15 +8,17 @@ class Program
     static void Main()
     {
         ProcessStartInfo start = new ProcessStartInfo();
+        string scriptPath = "/Users/ajeyanthananthajeyasri/PycharmProjects/pythonProject3/test.py";
+        string category = "Overall";  
+
 
         start.FileName = "/Users/ajeyanthananthajeyasri/PycharmProjects/pythonProject3/venv/bin/python3";
-        start.Arguments = $"\"{"/Users/ajeyanthananthajeyasri/PycharmProjects/pythonProject3/main.py"}"; // Pass arguments
+        start.Arguments = $"\"{scriptPath}\" {category}";  
         start.UseShellExecute = false;
         start.RedirectStandardOutput = true;
-        start.WorkingDirectory = "/Users/ajeyanthananthajeyasri/PycharmProjects/pythonProject3";
         // Explicitly set the working directory to the directory of the C# executable
         //Console.WriteLine("C# working directory: " + start.WorkingDirectory);
-        //start.WorkingDirectory = AppDomain.CurrentDomain.BaseDirectory;
+        start.WorkingDirectory = AppDomain.CurrentDomain.BaseDirectory;
         //Console.WriteLine(start.WorkingDirectory);
 
 
